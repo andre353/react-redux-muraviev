@@ -14,8 +14,9 @@ const Likes = (props) => {
 // так мы получаем доступ к state хранилища redux
 const mapStateToProps = (state) => {
   console.log('mapStateToProps >', state);
+  const {likesReducer} = state;
   return {
-    likes: state.likes // станет доступным в компоненте Likes через props
+    likes: likesReducer.likes // станет доступным в компоненте Likes через props
   }
 };
 
