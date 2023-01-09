@@ -1,4 +1,4 @@
-import React from 'react'
+import {connect} from 'react-redux'
 
 const Likes = (props) => {
   return (
@@ -9,6 +9,13 @@ const Likes = (props) => {
       </div>
     </div>
   )
+};
+
+const mapStateToProps = (state) => {
+  console.log('mapStateToProps >', state);
+  return {
+    likes: state.likes
+  }
 }
 
-export default Likes
+export default connect(mapStateToProps)(Likes)
