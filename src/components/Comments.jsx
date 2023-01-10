@@ -7,7 +7,6 @@ import SingleComment from './SingleComment';
 const Comments = (props) => {
   const [textComment, setTextComment] = useState('');
   const comments = useSelector(state => state.commentsReducer.comments);
-  // console.log(comments);
 
   const dispatch = useDispatch();
 
